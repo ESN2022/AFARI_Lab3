@@ -67,3 +67,9 @@ offset = data_axe_brute*3.9 / 15.6
 Ces étapes permettent d'obtenir des valeurs d'accélération plus précises et plus fiables.
 
 Pour finaliser notre système, il est nécessaire d'écrire une fonction d'interruption du Timer qui sera utilisée pour récupérer les valeurs des accélérations sur les axes X, Y et Z depuis l'ADXL345 toutes les secondes, puis les afficher sur l'afficheur 7-segments. Cette fonction permettra de mettre à jour les valeurs affichées en temps réel. De plus, une fonction d'interruption sera également écrite pour gérer le changement des valeurs des accélérations sur l'afficheur 7-segments lorsque l'utilisateur appuie sur le bouton poussoir. Cela permettra de naviguer entre les valeurs des accélérations sur les différents axes facilement.
+
+# C-Résultat :
+
+https://user-images.githubusercontent.com/121948245/213679461-c4176ad8-cd0a-4e28-bbdb-3c187b2b2958.mp4
+
+
