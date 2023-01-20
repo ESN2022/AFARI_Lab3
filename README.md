@@ -40,8 +40,11 @@ ecritureI2C : qui permet d'aller écrire les adresses et/ou les données sur le 
 Avant de pouvoir accéder aux données de l'accéléromètre, il est nécessaire de configurer certains paramètres de l'ADXL345 en écrivant dans les régistres suivants:
 
 #define ACT_INACT_CTL 0x27 pour activer l'ADXL345 (0x27 étant son adresse accessible via le bus I²C)
+
 #define POWER_CTL 0x2D pour configurer les paramètres d'alimentation (0x2D étant son adresse accessible via le bus I²C)
+
 #define DATA_FORMAT 0x31 pour formater l'affichage des données (0x31 étant son adresse accessible via le bus I²C)
+
 Afin de récupérer des valeurs exactes des accélérations sur les axes X, Y et Z, il est nécessaire d'ajouter des valeurs d'offset aux valeurs des accélérations. En effet, les valeurs correctes devraient être exprimées en .mg. Pour cela, en se référant à la documentation du capteur, nous devrons:
 
 récupérer d'abord les valeurs brutes des accélérations sur les 3 axes
