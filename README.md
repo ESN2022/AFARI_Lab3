@@ -19,3 +19,7 @@ L'architecture du système est représentée par le schéma ci-dessous :
 
 ![image](https://user-images.githubusercontent.com/121948245/213670611-3511e8fd-874e-4072-91b2-124336ad57b7.png)
 
+Dans ce système, la communication entre le microcontrôleur et l'accéléromètre se fait à travers l'interface I2C. Le microcontrôleur envoie des commandes de lecture et d'écriture pour configurer l'accéléromètre et récupérer les données d'accélération. Les données récupérées sont ensuite utilisées pour mettre à jour les affichages sur l'afficheur 7 segments via l'interface PIO.
+
+Pour contrôler les afficheurs 7 segments, une méthode utilisée est d'utiliser un PIO programmé en sortie de 24 bits, chaque afficheur nécessitant 4 bits. Cette approche permet de contrôler 6 afficheurs au total.
+
