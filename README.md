@@ -47,13 +47,19 @@ Avant de pouvoir accéder aux données de l'accéléromètre, il est nécessaire
 
 Afin de récupérer des valeurs exactes des accélérations sur les axes X, Y et Z, il est nécessaire d'ajouter des valeurs d'offset aux valeurs des accélérations. En effet, les valeurs correctes devraient être exprimées en .mg. Pour cela, en se référant à la documentation du capteur, nous devrons:
 
-récupérer d'abord les valeurs brutes des accélérations sur les 3 axes
-Appliquer l'équation suivante: offset = data_axe_brute*3.9 / 15.6
-faire plusieurs essais et calculer la moyenne
-considérer la valeur d'offset calculée en moyenne comme étant l'offset de référence (différent pour chaque axe)
-écrire ensuite ces valeurs dans les régistres d'offset correspondants :
+-récupérer d'abord les valeurs brutes des accélérations sur les 3 axes
+-Appliquer l'équation suivante:
+offset = data_axe_brute*3.9 / 15.6
+
+-faire plusieurs essais et calculer la moyenne
+-considérer la valeur d'offset calculée en moyenne comme étant l'offset de référence (différent pour chaque axe)
+-écrire ensuite ces valeurs dans les régistres d'offset correspondants :
+
 #define offset_X_addr 0x1E (addresse offset axe X)
+
 #define offset_Y_addr 0x1F (addresse offset axe Y)
+
 #define offset_Z_addr 0x20 (addresse offset axe Z)
+
 Ces étapes permettent d'obtenir des valeurs d'accélération plus précises et plus fiables.
 
